@@ -24,9 +24,22 @@ module.exports = {
       blockConfirmations: 6,
       url: RINKEBY_RPC_URl,
       accounts: [PRIVATE_KEY],
+      saveDeployments: true,
     },
   },
+  gasReporter: {
+    enabled: false,
+    currency: 'USD',
+    outputFile: 'gas-report.txt',
+    noColors: true,
+    //coinmarketcap: COINMARKETCAP_API_KEY,
+  },
   solidity: '0.8.9',
+  etherscan: {
+    apiKey: {
+      rinkeby: ETHERSCAN_API_KEY,
+    },
+  },
   namedAccounts: {
     deployer: {
       default: 0,
@@ -34,5 +47,8 @@ module.exports = {
     player: {
       default: 1,
     },
+  },
+  mocha: {
+    timeout: 500000, // 500 seconds max for running tests
   },
 };

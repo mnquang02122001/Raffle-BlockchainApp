@@ -26,6 +26,9 @@ module.exports = {
       accounts: [PRIVATE_KEY],
       saveDeployments: true,
     },
+    localhost: {
+      chainId: 31337,
+    },
   },
   gasReporter: {
     enabled: false,

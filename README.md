@@ -1,1 +1,1 @@
-My first Dapp
+Decentralized Lottery App
